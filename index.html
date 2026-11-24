@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🪷 ถึงคนที่รัก</title>
+    <style>
+        *{margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
+        body{
+            background: linear-gradient(180deg, #0c1445 0%, #1a237e 50%, #283593 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        h1{font-size: 1.8rem; margin-bottom: 10px;}
+        .lotus{font-size: 5rem; margin: 30px 0; animation: float 3s ease-in-out infinite;}
+        @keyframes float{
+            0%,100%{transform: translateY(0px);}
+            50%{transform: translateY(-15px);}
+        }
+        .text{font-size: 1.1rem; line-height: 2; max-width: 400px;}
+        .star{
+            position: absolute; width: 3px; height: 3px;
+            background: white; border-radius: 50%;
+            animation: twinkle 2s infinite;
+        }
+        @keyframes twinkle{
+            0%,100%{opacity: 0.2;}
+            50%{opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <h1>ถึงคนที่เค้ารักที่สุด ❤️</h1>
+    <div class="lotus">🪷</div>
+    <div class="text">
+        ขอให้เธออยู่กับเค้าไปนาน<br>
+        อยู่กับคนๆ นี้ไปนานนะ<br>
+        ขอให้เราผ่านเรื่องเลวร้ายไปด้วยกันได้ดี<br><br>
+        คิวรักเอม่านะ รักมากๆ ❤️<br>
+        ถึงจะทำให้อ้วนโกดเค้าบ่อยก็เถอะ<br>
+        แต่อยากให้อยู่ด้วยกันไปนานๆ เสมอนะ
+    </div>
+
+    <script>
+        for(let i=0; i<60; i++){
+            const s=document.createElement('div');
+            s.className='star';
+            s.style.left=Math.random()*100+'%';
+            s.style.top=Math.random()*85+'%';
+            s.style.animationDelay=Math.random()*2+'s';
+            document.body.appendChild(s);
+        }
+    </script>
+</body>
+</html>
